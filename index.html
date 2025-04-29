@@ -3,167 +3,134 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Akos Guld Portfolio Grid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akos Guld</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
-      margin: 0;
       background-color: #000;
-      font-family: Helvetica, Arial, sans-serif;
       color: #fff;
+      font-family: Helvetica, sans-serif;
+      overflow-x: hidden;
     }
-    .sidebar {
+    header {
       position: fixed;
-      top: 0; left: 0;
-      width: 200px;
-      height: 100vh;
-      background: #000;
-      padding: 40px 20px;
-    }
-    .sidebar h2 {
-      color: white;
-      font-size: 20px;
-    }
-    .sidebar nav a {
-      display: block;
-      margin: 10px 0;
-      color: white;
-      text-decoration: none;
-    }
-    .main {
-      margin-left: 220px;
-      padding: 40px;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 40px;
-    }
-    .grid-item {
-      cursor: pointer;
-    }
-    .grid-item img {
+      top: 0;
+      left: 0;
       width: 100%;
-      display: block;
-    }
-    .caption {
-      padding: 8px 0;
-    }
-    .caption .client {
-      font-size: 11px;
-      color: #f9c349;
-      text-transform: uppercase;
-      margin: 0;
-    }
-    .caption h3 {
-      font-size: 16px;
-      margin: 2px 0;
-      color: white;
-    }
-    .caption .type {
-      font-size: 12px;
-      color: #999;
-      margin: 0;
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.9);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-    .modal iframe {
-      width: 80%;
-      height: 70%;
-    }
-    .modal.show {
+      padding: 20px 40px;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 100;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .modal .close {
-      position: absolute;
-      top: 20px; right: 40px;
-      font-size: 40px;
-      color: white;
-      cursor: pointer;
+    header h1 {
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+    section {
+      min-height: 100vh;
+      padding: 120px 40px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 1400px;
+      margin: auto;
+    }
+    .video-thumb iframe {
+      width: 100%;
+      height: 240px;
+      border: none;
+    }
+    .video-thumb h3 {
+      font-size: 16px;
+      margin-top: 10px;
+      color: #fff;
+      text-align: left;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      padding: 40px;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <div class="sidebar">
-    <h2>akos guld</h2>
+  <header>
+    <h1>Akos Guld</h1>
     <nav>
-      <a href="#">videos</a>
-      <a href="#">about me</a>
-      <a href="#">contact</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
-  </div>
-  <div class="main">
-    
-    <div class="grid-item" onclick="openModal('1d4Th5MpYt5YPyWW8Qb2fYHiXYk1-3oM7')">
-      <img src="https://via.placeholder.com/600x338.png?text=FIS+World+Cup" alt="FIS World Cup Highlights Thumbnail">
-      <div class="caption">
-        <p class="client">FIS</p>
+  </header>
+
+  <section id="work">
+    <div class="section-title">Selected Work</div>
+    <div class="video-grid">
+      <div class="video-thumb">
+        <iframe src="https://drive.google.com/file/d/1d4Th5MpYt5YPyWW8Qb2fYHiXYk1-3oM7/preview" allow="autoplay"></iframe>
         <h3>FIS World Cup Highlights</h3>
-        <p class="type">SPORT / MUSIC VIDEO</p>
       </div>
-    </div>
-    
-    <div class="grid-item" onclick="openModal('1Am1z8zUmV3hRV62c_SjQxpkNl_nzFqHg')">
-      <img src="https://via.placeholder.com/600x338.png?text=Laax+Open" alt="Laax Open 2024 Thumbnail">
-      <div class="caption">
-        <p class="client">LAAX</p>
+      <div class="video-thumb">
+        <iframe src="https://drive.google.com/file/d/1Am1z8zUmV3hRV62c_SjQxpkNl_nzFqHg/preview" allow="autoplay"></iframe>
         <h3>Laax Open 2024</h3>
-        <p class="type">COMPETITION / HIGHLIGHTS</p>
       </div>
-    </div>
-    
-    <div class="grid-item" onclick="openModal('1NghLMS0i9KWo9l1lgZy0DEUC5Qq2XB0i')">
-      <img src="https://via.placeholder.com/600x338.png?text=Red+Bull+Rider" alt="Red Bull Rider Clip Thumbnail">
-      <div class="caption">
-        <p class="client">RED BULL</p>
+      <div class="video-thumb">
+        <iframe src="https://drive.google.com/file/d/1NghLMS0i9KWo9l1lgZy0DEUC5Qq2XB0i/preview" allow="autoplay"></iframe>
         <h3>Red Bull Rider Clip</h3>
-        <p class="type">SPORT / PROMO</p>
       </div>
-    </div>
-    
-    <div class="grid-item" onclick="openModal('1Isy8Vh1D2nTRCP4_54oQDw5owD0N7J2v')">
-      <img src="https://via.placeholder.com/600x338.png?text=Behind+the+Scenes" alt="Behind the Scenes Thumbnail">
-      <div class="caption">
-        <p class="client">AKOS GULD</p>
+      <div class="video-thumb">
+        <iframe src="https://drive.google.com/file/d/1Isy8Vh1D2nTRCP4_54oQDw5owD0N7J2v/preview" allow="autoplay"></iframe>
         <h3>Behind the Scenes</h3>
-        <p class="type">BTS / STORYTELLING</p>
       </div>
-    </div>
-    
-    <div class="grid-item" onclick="openModal('1I81iAvYHSTeq2FW3o7-q_HMbNczXB7CT')">
-      <img src="https://via.placeholder.com/600x338.png?text=Athlete+Promo" alt="Athlete Promo Edit Thumbnail">
-      <div class="caption">
-        <p class="client">INDEPENDENT</p>
+      <div class="video-thumb">
+        <iframe src="https://drive.google.com/file/d/1I81iAvYHSTeq2FW3o7-q_HMbNczXB7CT/preview" allow="autoplay"></iframe>
         <h3>Athlete Promo Edit</h3>
-        <p class="type">PROFILE / PROMO</p>
       </div>
     </div>
-    
-  </div>
+  </section>
 
-  <div class="modal" id="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <iframe id="modalFrame" src="" frameborder="0" allow="autoplay" allowfullscreen></iframe>
-  </div>
+  <section id="about">
+    <div class="section-title">About</div>
+    <p style="max-width: 700px; text-align: center;">I'm Akos Guld, a videographer, director, and editor based in London. I specialize in cinematic sports storytelling and have worked across the US, Canada, Austria, and Switzerland capturing global snowboard events and promos.</p>
+  </section>
 
-  <script>
-    function openModal(id) {
-      const modal = document.getElementById('modal');
-      const frame = document.getElementById('modalFrame');
-      frame.src = 'https://drive.google.com/file/d/' + id + '/preview';
-      modal.classList.add('show');
-    }
-    function closeModal() {
-      const modal = document.getElementById('modal');
-      const frame = document.getElementById('modalFrame');
-      frame.src = '';
-      modal.classList.remove('show');
-    }
-  </script>
+  <section id="contact">
+    <div class="section-title">Contact</div>
+    <p style="text-align: center;">
+      Email: kos.guld@gmail.com<br />
+      Instagram: <a href="https://instagram.com/kos.verified" style="color:#f9c349">@kos.verified</a><br />
+      TikTok: <a href="https://tiktok.com/@kos.verified" style="color:#f9c349">@kos.verified</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Akos Guld. All rights reserved.
+  </footer>
 </body>
 </html>
