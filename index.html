@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akos Guld | Videographer & Editor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #eee;
+    }
+    header h1 {
+      font-size: 1.2rem;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #666;
+      font-weight: 600;
+    }
+    .hero {
+      position: relative;
+      height: 80vh;
+      background: url('https://source.unsplash.com/1600x900/?palmtrees') center center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .hero button {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .video-card {
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .video-card img {
+      width: 100%;
+      display: block;
+    }
+    .video-card .info {
+      padding: 15px;
+    }
+    .video-card .info h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    .video-card .info p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    footer {
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Akos Guld <span style="font-weight: 400; font-size: 0.9rem;">| Videographer and Editor</span></h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Reel</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Video Channel Name</h2>
+    <button>▶ Play Video</button>
+    <button style="margin-top: 10px; background: white; color: black;">All Videos</button>
+  </section>
+
+  <section class="gallery">
+    <div class="video-card">
+      <img src="https://source.unsplash.com/800x600/?taxi" alt="Video Thumbnail" />
+      <div class="info">
+        <h3>Video Title</h3>
+        <p>Description or key takeaway from this featured shoot.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <img src="https://source.unsplash.com/800x600/?kayak" alt="Video Thumbnail" />
+      <div class="info">
+        <h3>Video Title</h3>
+        <p>Description or key takeaway from this featured shoot.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <img src="https://source.unsplash.com/800x600/?lifeguard" alt="Video Thumbnail" />
+      <div class="info">
+        <h3>Video Title</h3>
+        <p>Description or key takeaway from this featured shoot.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <img src="https://source.unsplash.com/800x600/?city" alt="Video Thumbnail" />
+      <div class="info">
+        <h3>Video Title</h3>
+        <p>Description or key takeaway from this featured shoot.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <img src="https://source.unsplash.com/800x600/?neon" alt="Video Thumbnail" />
+      <div class="info">
+        <h3>Video Title</h3>
+        <p>Description or key takeaway from this featured shoot.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <img src="https://source.unsplash.com/800x600/?underground" alt="Video Thumbnail" />
+      <div class="info">
+        <h3>Video Title</h3>
+        <p>Description or key takeaway from this featured shoot.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Akos Guld. All rights reserved.
+  </footer>
+</body>
+</html>
