@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Akos Guld | Videographer &amp; Editor</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+  background-color: #e0e0e0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #e0e0e0;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #eee;
+    }
+    header h1 {
+      font-size: 1.6rem;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #666;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #000;
+    }
+    .hero {
+  position: relative;
+      padding: 20px 0;
+      background: #fff;
+    }
+    .video-row {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: nowrap;
+      padding: 0 20px;
+    }
+    .video-row iframe {
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 60px 40px;
+    }
+    .video-card {
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background: #fff;
+    }
+    .video-card img {
+      width: 100%;
+      display: block;
+    }
+    .video-card .info {
+      padding: 15px;
+    }
+    .video-card .info h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    .video-card .info p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    footer {
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #999;
+    }
+  <style>
+  /* Modern Nav Styles */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background-color: #2c2c2c; padding: 1rem 2rem;
+    display: flex; justify-content: space-between; align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .logo { color: #fff; font-size: 1.5rem; font-weight: 700; }
+  .nav-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
+  nav { display: flex; gap: 1.5rem; }
+  nav a {
+    color: #ddd; text-decoration: none; font-weight: 600; padding: 0.5rem; position: relative;
+    transition: color 0.3s;
+  }
+  nav a::after {
+    content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 2px;
+    background: #fff; transition: width 0.3s ease, left 0.3s ease;
+  }
+  nav a:hover { color: #fff; }
+  nav a:hover::after { width: 100%; left: 0; }
+  nav a.active { color: #fff; }
+  nav a.active::after { width: 100%; left: 0; }
+  @media (max-width: 768px) {
+    nav { display: none; flex-direction: column; background: #2c2c2c; position: absolute; top: 100%; right: 2rem; padding: 1rem; }
+    nav.open { display: flex; }
+    .nav-toggle { display: block; }
+  }
+
+    /* Nav text & background override */
+    header {
+      background-color: #555 !important;
+    }
+    .logo, nav a {
+      color: #fff !important;
+    }
+
+/* Modern carousel button styling */
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(44, 44, 44, 0.6);
+  color: #fff;
+  border: 2px solid #fff;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.carousel-btn.prev { left: 16px; }
+.carousel-btn.next { right: 16px; }
+.carousel-btn:hover {
+  background: rgba(44, 44, 44, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">Akos Guld</div>
+  <button class="nav-toggle" aria-label="Toggle nav">☰</button>
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+<script>
+  // Mobile nav toggle
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('nav');
+  navToggle.addEventListener('click', () => nav.classList.toggle('open'));
+</script>
+
+<section class="hero" id="home" style="padding: 40px 0; background: #fff; position: relative;">
+<button class="carousel-btn prev" onclick="scrollCarousel(-1)" aria-label="Previous Slide">❮</button>
+<button class="carousel-btn next" onclick="scrollCarousel(1)" aria-label="Next Slide">❯</button>
+<div id="carousel" style="display: flex; overflow-x: hidden; scroll-behavior: smooth; gap: 30px; padding: 0 60px; scroll-snap-type: x mandatory;">
+<iframe allowfullscreen="" height="533" src="https://www.youtube.com/embed/sEo-gaksGkw?modestbranding=1&amp;rel=0&amp;showinfo=0" style="scroll-snap-align: center; flex-shrink: 0; border-radius: 12px; border: none; box-shadow: 0 6px 12px rgba(0,0,0,0.2);" width="300"></iframe>
+<iframe allowfullscreen="" height="533" src="https://www.youtube.com/embed/om-slKsUdOQ?modestbranding=1&amp;rel=0&amp;showinfo=0" style="scroll-snap-align: center; flex-shrink: 0; border-radius: 12px; border: none; box-shadow: 0 6px 20px rgba(0,0,0,0.4);" width="944"></iframe>
+<iframe allowfullscreen="" height="533" src="https://www.youtube.com/embed/ydqBHYAm2wQ?modestbranding=1&amp;rel=0&amp;showinfo=0" style="scroll-snap-align: center; flex-shrink: 0; border-radius: 12px; border: none; box-shadow: 0 6px 12px rgba(0,0,0,0.2);" width="300"></iframe>
+<iframe allowfullscreen="" height="533" src="https://www.youtube.com/embed/0UIleg49RVw?modestbranding=1&amp;rel=0&amp;showinfo=0" style="scroll-snap-align: center; flex-shrink: 0; border-radius: 12px; border: none; box-shadow: 0 6px 12px rgba(0,0,0,0.2);" width="300"></iframe>
+<iframe allowfullscreen="" height="533" src="https://www.youtube.com/embed/DNeO125vAuw?modestbranding=1&amp;rel=0&amp;showinfo=0" style="scroll-snap-align: center; flex-shrink: 0; border-radius: 12px; border: none; box-shadow: 0 6px 12px rgba(0,0,0,0.2);" width="300"></iframe>
+<iframe allowfullscreen="" height="533" src="https://www.youtube.com/embed/HAMvqeZX4SM?modestbranding=1&amp;rel=0&amp;showinfo=0" style="scroll-snap-align: center; flex-shrink: 0; border-radius: 12px; border: none; box-shadow: 0 6px 12px rgba(0,0,0,0.2);" width="300"></iframe>
+<iframe allowfullscreen="" height="533" src="https://www.youtube.com/embed/89NrIFGwx1Y?modestbranding=1&amp;rel=0&amp;showinfo=0" style="scroll-snap-align: center; flex-shrink: 0; border-radius: 12px; border: none; box-shadow: 0 6px 12px rgba(0,0,0,0.2);" width="300"></iframe>
+<iframe allowfullscreen="" height="533" src="https://www.youtube.com/embed/aqb3zbthAko?modestbranding=1&amp;rel=0&amp;showinfo=0" style="scroll-snap-align: center; flex-shrink: 0; border-radius: 12px; border: none; box-shadow: 0 6px 12px rgba(0,0,0,0.2);" width="300"></iframe>
+<iframe allowfullscreen="" height="533" src="https://www.youtube.com/embed/amhRzsEh5SI?modestbranding=1&amp;rel=0&amp;showinfo=0" style="scroll-snap-align: center; flex-shrink: 0; border-radius: 12px; border: none; box-shadow: 0 6px 12px rgba(0,0,0,0.2);" width="300"></iframe>
+<iframe allowfullscreen="" height="533" src="https://www.youtube.com/embed/_kf8-MAvU8k?modestbranding=1&amp;rel=0&amp;showinfo=0" style="scroll-snap-align: center; flex-shrink: 0; border-radius: 12px; border: none; box-shadow: 0 6px 12px rgba(0,0,0,0.2);" width="300"></iframe>
+<iframe allowfullscreen="" height="533" src="https://www.youtube.com/embed/rj8DLEgN1MU?modestbranding=1&amp;rel=0&amp;showinfo=0" style="scroll-snap-align: center; flex-shrink: 0; border-radius: 12px; border: none; box-shadow: 0 6px 12px rgba(0,0,0,0.2);" width="300"></iframe>
+<iframe allowfullscreen="" height="533" src="https://www.youtube.com/embed/iuuM4OojGZE?modestbranding=1&amp;rel=0&amp;showinfo=0" style="scroll-snap-align: center; flex-shrink: 0; border-radius: 12px; border: none; box-shadow: 0 6px 12px rgba(0,0,0,0.2);" width="300"></iframe>
+<iframe allowfullscreen="" height="533" src="https://www.youtube.com/embed/ywmmDO9ores?modestbranding=1&amp;rel=0&amp;showinfo=0" style="scroll-snap-align: center; flex-shrink: 0; border-radius: 12px; border: none; box-shadow: 0 6px 12px rgba(0,0,0,0.2);" width="300"></iframe>
+<iframe allowfullscreen="" height="533" src="https://www.youtube.com/embed/vADGQ8LZCe0?modestbranding=1&amp;rel=0&amp;showinfo=0" style="scroll-snap-align: center; flex-shrink: 0; border-radius: 12px; border: none; box-shadow: 0 6px 12px rgba(0,0,0,0.2);" width="300"></iframe>
+<iframe allowfullscreen="" height="533" src="https://www.youtube.com/embed/v3VyE8YHeo0?modestbranding=1&amp;rel=0&amp;showinfo=0" style="scroll-snap-align: center; flex-shrink: 0; border-radius: 12px; border: none; box-shadow: 0 6px 12px rgba(0,0,0,0.2);" width="300"></iframe>
+<iframe allowfullscreen="" height="533" src="https://www.youtube.com/embed/s3quJsq__9U?modestbranding=1&amp;rel=0&amp;showinfo=0" style="scroll-snap-align: center; flex-shrink: 0; border-radius: 12px; border: none; box-shadow: 0 6px 12px rgba(0,0,0,0.2);" width="300"></iframe>
+<iframe allowfullscreen="" height="533" src="https://www.youtube.com/embed/Vx05_KpwboE?modestbranding=1&amp;rel=0&amp;showinfo=0" style="scroll-snap-align: center; flex-shrink: 0; border-radius: 12px; border: none; box-shadow: 0 6px 12px rgba(0,0,0,0.2);" width="300"></iframe>
+</div>
+
+</section>
+<section id="about" style="padding: 60px 40px; background-color: #e0e0e0; text-align: center;">
+<h2 style="font-size: 2rem; margin-bottom: 20px;">About Me</h2>
+<p style="max-width: 800px; margin: 0 auto; font-size: 1rem; color: #555;">
+    I'm Akos — a videographer, editor, and director currently based in London. Over the last season, I travelled through Canada, the U.S., Switzerland, and Austria, shooting elite-level snowboard championships and working alongside world-class athletes. I’ve created content for global brands across sport and lifestyle, producing everything from fast-paced reels and short-form edits to cinematic branded campaigns and behind-the-scenes documentary-style vlogs. I focus on capturing real energy and building visual stories that connect with audiences across platforms.
+  </p>
+</section><section id="full-length" style="padding:50px 20px; background-color:#f9f9f9;"><h2 style="text-align:center; font-size:2rem; margin-bottom:2rem;">Full-Length YouTube Videos</h2><div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; max-width:1200px; margin:0 auto;">
+<div style="width:300px; text-align:center; background:#fff; padding:10px; margin:10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';"><a href="https://youtu.be/YOkMsXpeluU" style="display:block; position:relative;" target="_blank"><img alt="Our FINAL spring shred of the YEAR!" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.03)'" src="maxresdefault.jpg" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; transition:transform 0.3s ease;"/></a><p style="margin-top:0.5rem; font-weight:600; font-size:1rem;">Our FINAL spring shred of the YEAR!</p></div>
+<div style="width:300px; text-align:center; background:#fff; padding:10px; margin:10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';"><a href="https://youtu.be/Uv2X3wH5FK0" style="display:block; position:relative;" target="_blank"><img alt="BIG AIR World Champs in St. Moritz" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.03)'" src="maxresdefault (1).jpg" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; transition:transform 0.3s ease;"/></a><p style="margin-top:0.5rem; font-weight:600; font-size:1rem;">BIG AIR World Champs in St. Moritz</p></div>
+<div style="width:300px; text-align:center; background:#fff; padding:10px; margin:10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';"><a href="https://youtu.be/CEudAdEFQKA" style="display:block; position:relative;" target="_blank"><img alt="The Snowboard World Championships" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.03)'" src="maxresdefault (2).jpg" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; transition:transform 0.3s ease;"/></a><p style="margin-top:0.5rem; font-weight:600; font-size:1rem;">The Snowboard World Championships</p></div>
+<div style="width:300px; text-align:center; background:#fff; padding:10px; margin:10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';"><a href="https://youtu.be/BRM3rfF7S_A" style="display:block; position:relative;" target="_blank"><img alt="Did Maisie break her thumb before the contest?!" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.03)'" src="maxresdefault (3).jpg" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; transition:transform 0.3s ease;"/></a><p style="margin-top:0.5rem; font-weight:600; font-size:1rem;">Did Maisie break her thumb before the contest?!</p></div>
+<div style="width:300px; text-align:center; background:#fff; padding:10px; margin:10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';"><a href="https://www.youtube.com/watch?v=Rxg-NY3AOxg" style="display:block; position:relative;" target="_blank"><img alt="The Absolut Park Spring Battle!!" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.03)'" src="maxresdefault (5).jpg" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; transition:transform 0.3s ease;"/></a><p style="margin-top:0.5rem; font-weight:600; font-size:1rem;">The Absolut Park Spring Battle!!</p></div>
+<div style="width:300px; text-align:center; background:#fff; padding:10px; margin:10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';"><a href="https://www.youtube.com/watch?v=-t7D1e3IUik" style="display:block; position:relative;" target="_blank"><img alt="Competing in Canada's biggest snowboard contest" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.03)'" src="maxresdefault (6).jpg" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; transition:transform 0.3s ease;"/></a><p style="margin-top:0.5rem; font-weight:600; font-size:1rem;">Competing in Canada's biggest snowboard contest</p></div>
+<div style="width:300px; text-align:center; background:#fff; padding:10px; margin:10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';"><a href="https://www.youtube.com/watch?v=3T5O3byID3A" style="display:block; position:relative;" target="_blank"><img alt="The Calgary World Cup in ALBERTA, CANADA" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.03)'" src="maxresdefault (7).jpg" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; transition:transform 0.3s ease;"/></a><p style="margin-top:0.5rem; font-weight:600; font-size:1rem;">The Calgary World Cup in ALBERTA, CANADA</p></div>
+<div style="width:300px; text-align:center; background:#fff; padding:10px; margin:10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';"><a href="https://www.youtube.com/watch?v=M39ydwsT0lk" style="display:block; position:relative;" target="_blank"><img alt="Snowboarding in America, competing for the Olympics" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.03)'" src="maxresdefault (8).jpg" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; transition:transform 0.3s ease;"/></a><p style="margin-top:0.5rem; font-weight:600; font-size:1rem;">Snowboarding in America, competing for the Olympics</p></div>
+<div style="width:300px; text-align:center; background:#fff; padding:10px; margin:10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';">
+  <a href="https://www.youtube.com/watch?v=BVlGx6UdGhU&t=7s&ab_channel=LachieGood" style="display:block; position:relative;" target="_blank">
+    <img src="https://img.youtube.com/vi/BVlGx6UdGhU/maxresdefault.jpg" alt="Video 9" style="width:100%; height:168px; object-fit:cover; border-radius:12px; transition:transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"/>
+  </a>
+  <p style="margin-top:0.5rem; font-weight:600; font-size:1rem;">The life of professional snowboarders (4K)</p>
+</div>
+<div style="width:300px; text-align:center; background:#fff; padding:10px; margin:10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';">
+  <a href="https://www.youtube.com/watch?v=9f7XHf8D-5o&t=60s&ab_channel=LachieGood" style="display:block; position:relative;" target="_blank">
+    <img src="https://img.youtube.com/vi/9f7XHf8D-5o/maxresdefault.jpg" alt="Video 10" style="width:100%; height:168px; object-fit:cover; border-radius:12px; transition:transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"/>
+  </a>
+  <p style="margin-top:0.5rem; font-weight:600; font-size:1rem;">Snowboarding in ASPEN</p>
+</div>
+<div style="width:300px; text-align:center; background:#fff; padding:10px; margin:10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';">
+  <a href="https://www.youtube.com/watch?v=uEwpKnZk6fg&t=25s&ab_channel=LachieGood" style="display:block; position:relative;" target="_blank">
+    <img src="https://img.youtube.com/vi/uEwpKnZk6fg/maxresdefault.jpg" alt="Video 11" style="width:100%; height:168px; object-fit:cover; border-radius:12px; transition:transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"/>
+  </a>
+  <p style="margin-top:0.5rem; font-weight:600; font-size:1rem;">Is LAAX the best place in the world?</p>
+</div>
+<div style="width:300px; text-align:center; background:#fff; padding:10px; margin:10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';">
+  <a href="https://www.youtube.com/watch?v=tlLoVoAomaw&ab_channel=LachieGood" style="display:block; position:relative;" target="_blank">
+    <img src="https://img.youtube.com/vi/tlLoVoAomaw/maxresdefault.jpg" alt="Video 12" style="width:100%; height:168px; object-fit:cover; border-radius:12px; transition:transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"/>
+  </a>
+  <p style="margin-top:0.5rem; font-weight:600; font-size:1rem;">The LAAX OPEN 2025 // part 2</p>
+</div>
+</section>
+
+<section id="contact" style="padding: 40px; text-align: center;">
+<h2>Contact</h2>
+<p>For inquiries, collaborations, or bookings, please email <a href="mailto:kos.guld@gmail.com">kos.guld@gmail.com</a>
+    or DM on Instagram <a href="https://instagram.com/kos.verified" target="_blank">@kos.verified</a>.</p>
+</section>
+<footer>
+    © 2025 Akos Guld. All rights reserved.
+  </footer>
+
+<script>
+// Infinite seamless carousel
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('carousel');
+  if (!container) return;
+  const items = Array.from(container.children);
+  const gap = parseInt(getComputedStyle(container).gap) || 0;
+  const slideWidth = items[0].getBoundingClientRect().width + gap;
+
+  // Clone nodes
+  const prependClones = items.map(node => node.cloneNode(true));
+  const appendClones = items.map(node => node.cloneNode(true));
+  prependClones.reverse().forEach(node => container.insertBefore(node, container.firstChild));
+  appendClones.forEach(node => container.appendChild(node));
+
+  // Initial offset
+  
+  // Determine the index of the first horizontal (wider) slide
+  const targetIndex = items.findIndex(f => f.clientWidth > f.clientHeight);
+  // Fallback to first slide if none found
+  const initialOffsetIndex = targetIndex >= 0 ? targetIndex : 0;
+  // Set initial scroll to center that slide
+  container.scrollLeft = slideWidth * items.length + initialOffsetIndex * slideWidth;
+
+
+  // Scroll function
+  window.scrollCarousel = function(direction) {
+    const maxScroll = slideWidth * (items.length * 2);
+    let newPos = container.scrollLeft + direction * slideWidth;
+    container.scrollTo({ left: newPos, behavior: 'smooth' });
+  };
+
+  // Reposition on boundary reached
+  let isRepositioning = false;
+  container.addEventListener('scroll', () => {
+    if (isRepositioning) return;
+    if (container.scrollLeft <= slideWidth / 2) {
+      isRepositioning = true;
+      container.style.scrollBehavior = 'auto';
+      container.scrollLeft = slideWidth * (items.length + (container.scrollLeft/slideWidth));
+      container.style.scrollBehavior = 'smooth';
+      isRepositioning = false;
+    } else if (container.scrollLeft >= maxScroll + slideWidth / 2) {
+      isRepositioning = true;
+      container.style.scrollBehavior = 'auto';
+      container.scrollLeft = slideWidth * (items.length + (container.scrollLeft - maxScroll)/slideWidth);
+      container.style.scrollBehavior = 'smooth';
+      isRepositioning = false;
+    }
+  });
+});
+</script>
+</body>
+</html>
